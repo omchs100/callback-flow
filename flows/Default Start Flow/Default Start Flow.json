@@ -1,18 +1,19 @@
 {
   "name": "00000000-0000-0000-0000-000000000000",
-  "displayName": "Default Start Flow",
+  "displayName": "WelcomeFlow",
   "description": "A start flow created along with the agent",
   "transitionRoutes": [ {
     "intent": "Default Welcome Intent",
     "triggerFulfillment": {
       "messages": [ {
         "text": {
-          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+          "text": [ "Welcome to C I I . Let me verify you first." ]
         },
         "languageCode": "en"
       } ]
     },
-    "name": "310e88e7-42cf-4ea8-a5b0-bf0d816b7bad"
+    "targetFlow": "Greeting",
+    "name": "49fa4902-3d3e-48e1-83db-0d8b7f669751"
   } ],
   "eventHandlers": [ {
     "event": "sys.no-match-default",
@@ -24,7 +25,7 @@
         "languageCode": "en"
       } ]
     },
-    "name": "1b96ff39-68da-4483-b306-23a1d14335b4"
+    "name": "b138d3b1-f300-4600-b897-4dea24428b8d"
   }, {
     "event": "sys.no-input-default",
     "triggerFulfillment": {
@@ -35,10 +36,17 @@
         "languageCode": "en"
       } ]
     },
-    "name": "98631740-3215-4fc4-ab6a-36261f92a40b"
+    "name": "00f37f3b-24fe-47d9-9b9c-85e12b885a7d"
   } ],
   "nluSettings": {
     "modelType": "MODEL_TYPE_ADVANCED",
-    "classificationThreshold": 0.30000001
+    "classificationThreshold": 0.30000001,
+    "modelTrainingMode": "MODEL_TRAINING_MODE_AUTOMATIC",
+    "multiIntentSettings": {
+    
+    }
+  },
+  "advancedSettings": {
+    "enabled": true
   }
 }
