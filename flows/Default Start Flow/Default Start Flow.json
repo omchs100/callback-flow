@@ -1,6 +1,6 @@
 {
   "name": "00000000-0000-0000-0000-000000000000",
-  "displayName": "WelcomeFlow",
+  "displayName": "Default Start Flow",
   "description": "A start flow created along with the agent",
   "transitionRoutes": [ {
     "intent": "Default Welcome Intent",
